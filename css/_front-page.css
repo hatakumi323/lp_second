@@ -10,7 +10,7 @@ body {
 
 @media (min-width: 768px) {
   .util-ttl {
-    font-size: 3.6rem;
+    font-size: 36px;
   }
 }
 
@@ -25,7 +25,7 @@ body {
   color: #3e3e3e;
   display: block;
   font-family: "Montserrat", sans-serif;
-  font-size: 2rem;
+  font-size: 20px;
   font-weight: 600;
   letter-spacing: 0.2em;
   padding: .8em 0;
@@ -222,7 +222,7 @@ body {
 
 @media (min-width: 768px) {
   .results {
-    margin: 120px 0 0 auto;
+    margin: 215px 0 0 auto;
     padding: 58px 0 60px 60px;
   }
 }
@@ -357,7 +357,7 @@ body {
 }
 
 .results-itemTtl {
-  font-size: 2rem;
+  font-size: 20px;
   font-weight: 700;
 }
 
@@ -368,7 +368,7 @@ body {
 }
 
 .results-itemTxt {
-  font-size: 1.6rem;
+  font-size: 16px;
   line-height: 1.5;
   margin-top: 6px;
 }
@@ -377,4 +377,114 @@ body {
   .results-itemTxt {
     font-size: 1.2rem;
   }
+}
+
+.price {
+  padding: 60px 160px;
+}
+
+.price__ttl {
+  font-size: 36px;
+  color: #3E3E3E;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  line-height: 1.2;
+  padding: 60px 0;
+}
+
+.price table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.price table th {
+  width: 30%;
+  padding: 30px;
+  text-align: center;
+  color: #fff;
+  background-color: #3e3e3e;
+  min-width: 300px;
+  border: 1px solid #3e3e3e;
+  border-bottom: 1px solid #fff;
+  align-items: center;
+  font-size: 24px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.price table th:last-child {
+  border-bottom: 1px solid #3e3e3e;
+}
+
+.price table td {
+  width: 70%;
+  padding: 30px;
+  border: 1px solid #3e3e3e;
+  font-weight: bold;
+  font-size: 24px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.price span {
+  padding-top: 12px;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.comments {
+  padding: 120px 40px;
+}
+
+.comments__inner {
+  width: 1200px;
+}
+
+.comments__ttl {
+  font-size: 36px;
+  color: #3E3E3E;
+  font-family: 'Montserrat', sans-serif;
+  text-align: left;
+  line-height: 1.2;
+  padding-bottom: 60px;
+}
+
+.comments__list__wrapper {
+  align-items: center;
+  display: flex;
+}
+
+.comments__list {
+  background-color: #fff;
+  padding: 120px 60px 60px;
+  box-shadow: 0 2px 4px gray;
+}
+
+.comments__item {
+  display: flex;
+  align-items: center;
+  padding-bottom: 60px;
+}
+
+.comments__item img {
+  padding-right: 32px;
+}
+
+.comments__body {
+  font-size: 16px;
+  letter-spacing: -1px;
+  line-height: 1.5;
+  color: #3e3e3e;
+}
+
+.comments__img {
+  width: 534px;
+}
+
+.comments__bg {
+  position: relative;
+  background-color: #3e3e3e;
+  position: relative;
+  right: 300px;
+  bottom: 0;
+  height: 576px;
+  width: 960px;
 }
