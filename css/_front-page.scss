@@ -403,9 +403,11 @@ $breakpoints: (
   }
 
   .comments {
-      padding: 120px 40px;
+      position: relative;
       &__inner {
-          width: 1200px;
+          position: relative;
+          left: 40px;
+          bottom: 60px;
         }
         &__ttl {
             font-size: 36px;
@@ -418,11 +420,12 @@ $breakpoints: (
         &__list__wrapper {
           align-items: center;
           display: flex;
+          padding-top: 100px;
         }
         
         &__list {
             background-color: #fff;
-            padding: 120px 60px 60px;
+            padding: 120px 40px 60px 60px;
             box-shadow: 0 2px 4px gray;
             }
         &__item {
@@ -443,13 +446,24 @@ $breakpoints: (
             width: 534px;
             }
         &__bg {
-            position: relative;
+            position: absolute;
             background-color: #3e3e3e;
-            position: relative;
-            right: 300px;
             bottom: 0;
-            height: 576px;
+            height: 500px;
             width: 960px;
+            z-index: -999;
         }
+  }
+
+  .qa {
+    background-image: url(../img/qa-bg-min.png);
+    &__ttl {
+        font-size: 36px;
+        color: #3E3E3E;
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+        line-height: 1.2;
+        padding: 60px 0;
+    }
   }
   

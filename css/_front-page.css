@@ -431,11 +431,13 @@ body {
 }
 
 .comments {
-  padding: 120px 40px;
+  position: relative;
 }
 
 .comments__inner {
-  width: 1200px;
+  position: relative;
+  left: 40px;
+  bottom: 60px;
 }
 
 .comments__ttl {
@@ -450,11 +452,12 @@ body {
 .comments__list__wrapper {
   align-items: center;
   display: flex;
+  padding-top: 100px;
 }
 
 .comments__list {
   background-color: #fff;
-  padding: 120px 60px 60px;
+  padding: 120px 40px 60px 60px;
   box-shadow: 0 2px 4px gray;
 }
 
@@ -480,11 +483,23 @@ body {
 }
 
 .comments__bg {
-  position: relative;
+  position: absolute;
   background-color: #3e3e3e;
-  position: relative;
-  right: 300px;
   bottom: 0;
-  height: 576px;
+  height: 500px;
   width: 960px;
+  z-index: -999;
+}
+
+.qa {
+  background-image: url(../img/qa-bg-min.png);
+}
+
+.qa__ttl {
+  font-size: 36px;
+  color: #3E3E3E;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  line-height: 1.2;
+  padding: 60px 0;
 }
