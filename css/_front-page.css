@@ -493,6 +493,10 @@ body {
 
 .qa {
   background-image: url(../img/qa-bg-min.png);
+  background-size: cover;
+  height: 925px;
+  padding: 0 40px 120px 0;
+  position: relative;
 }
 
 .qa__ttl {
@@ -502,4 +506,45 @@ body {
   text-align: center;
   line-height: 1.2;
   padding: 60px 0;
+}
+
+.qa__list {
+  width: 50%;
+  position: absolute;
+  right: 0;
+  margin-right: 32px;
+}
+
+.qa__item {
+  border-radius: 4px;
+  padding: 16px;
+  background-color: #fff;
+  margin-bottom: 32px;
+}
+
+.qa__item__inner {
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.qa__item span {
+  background-color: #3B69FF;
+  color: #fff;
+  border-radius: 999px;
+  padding: 3px 6px 3px 5px;
+  margin-right: 16px;
+  font-size: 1rem;
+}
+
+.qa__acd {
+  position: absolute;
+  right: 0;
+}
+
+.qa .acd__ans {
+  padding: 16px;
+  background: rgba(73, 115, 255, 0.2);
+  border-radius: 4px;
+  margin-top: 16px;
 }
