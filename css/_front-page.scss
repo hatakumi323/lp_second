@@ -1,6 +1,4 @@
-body {
-    background-color: #F3F3F3;
-}
+
 // フォント
 $font-family-default: "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "Droid Sans", sans-serif;
 $font-family-english: "Montserrat", sans-serif;
@@ -23,6 +21,10 @@ $breakpoints: (
 	@media #{map-get($breakpoints, $breakpoint)} {
 		@content;
 	}
+}
+body {
+    background-color: #F3F3F3;
+    max-width: $layout-width-canvas;
 }
 
 .util-ttl {
@@ -405,9 +407,8 @@ $breakpoints: (
   .comments {
       position: relative;
       &__inner {
-          position: relative;
-          left: 40px;
-          bottom: 60px;
+            padding-left: 40px;
+            padding-bottom: 120px;
         }
         &__ttl {
             font-size: 36px;
@@ -508,6 +509,7 @@ $breakpoints: (
   
   .access {
       position: relative;
+      height: 760px;
       &__info {
           position: absolute;
           top: 0;
@@ -542,9 +544,8 @@ $breakpoints: (
           
           .iframe__wrap {
               position: absolute;
-              top: 120px;
+              bottom: 120px;
               right: 40px;
-              margin-bottom: 120px;
               max-width: 100%;
           }
       }

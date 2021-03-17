@@ -1,6 +1,7 @@
 @charset "UTF-8";
 body {
   background-color: #F3F3F3;
+  max-width: 1280px;
 }
 
 .util-ttl {
@@ -436,9 +437,8 @@ body {
 }
 
 .comments__inner {
-  position: relative;
-  left: 40px;
-  bottom: 60px;
+  padding-left: 40px;
+  padding-bottom: 120px;
 }
 
 .comments__ttl {
@@ -552,6 +552,7 @@ body {
 
 .access {
   position: relative;
+  height: 760px;
 }
 
 .access__info {
@@ -590,9 +591,8 @@ body {
 
 .access__map .iframe__wrap {
   position: absolute;
-  top: 120px;
+  bottom: 120px;
   right: 40px;
-  margin-bottom: 120px;
   max-width: 100%;
 }
 
