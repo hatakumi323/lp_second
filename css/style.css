@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! destyle.css v2.0.2 | MIT License | https://github.com/nicolas-cusan/destyle.css */
 /* Reset box-model and set borders */
 /* ============================================ */
@@ -1019,6 +1020,59 @@ body {
   background: rgba(73, 115, 255, 0.2);
   border-radius: 4px;
   margin-top: 16px;
+}
+
+.access {
+  position: relative;
+}
+
+.access__info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-left: 100px;
+  background-color: #3E3E3E;
+  width: 980px;
+  color: #fff;
+}
+
+.access__ttl {
+  font-weight: bold;
+  font-size: 32px;
+  color: #fff;
+  line-height: 1.5;
+  padding-top: 100px;
+  padding-bottom: 40px;
+}
+
+.access__row {
+  letter-spacing: 2px;
+  font-size: 1rem;
+  font-weight: "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "Droid Sans", sans-serif;
+  line-height: 1.5;
+}
+
+.access__btn {
+  margin-top: 32px;
+  margin-bottom: 120px;
+  padding: 20px 80px;
+  font-weight: "Montserrat", sans-serif;
+  font-size: 20px;
+}
+
+.access__map .iframe__wrap {
+  position: absolute;
+  top: 120px;
+  right: 40px;
+  margin-bottom: 120px;
+  max-width: 100%;
+}
+
+.contact-us {
+  background-image: url(../img/contact-bg-min.png);
+  background-size: cover;
+  width: 100%;
+  height: 1122px;
 }
 
 .header {
