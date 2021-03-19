@@ -1,0 +1,46 @@
+.footer {
+  background-color: #3E3E3E;
+  padding: 60px 160px;
+}
+
+.footer__inner {
+  width: 980px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__inner .icon__wrap {
+  display: flex;
+  color: #E3E3E3;
+  font-size: 32px;
+  margin-bottom: 40px;
+  opacity: .6;
+}
+
+.footer__inner .fa-twitter {
+  margin-right: 32px;
+}
+
+.footer__list {
+  color: #E3E3E3;
+  font-size: 1rem;
+  letter-spacing: .4px;
+}
+
+.footer__item:not(:first-child) {
+  margin-top: 24px;
+}
+
+.footer__ttl {
+  color: #E3E3E3;
+  font-size: 40px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer__copy {
+  text-align: right;
+  color: #E3E3E3;
+  opacity: .6;
+}

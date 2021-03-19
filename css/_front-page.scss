@@ -592,7 +592,9 @@ body {
 
         .contact-from__row {
             display: flex;
-            // align-items: center;
+            &:nth-child(6) {
+                display: block;
+            }
 
             &:not(:first-child) {
                 margin-top: 32px;
@@ -643,7 +645,8 @@ body {
 
         textarea {
             border: 1px solid #707070;
-            width: 720px;
+            margin-top: 8px;
+            width: 100%;
             height: 200px;
         }
 

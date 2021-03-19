@@ -1,0 +1,41 @@
+.footer {
+    background-color: #3E3E3E;
+    padding: 60px 160px;
+    &__inner {
+        width: 980px;
+        display: flex;
+        justify-content: space-between;
+        .icon__wrap {
+            display: flex;
+            color: #E3E3E3;
+            font-size: 32px;
+            margin-bottom: 40px;
+            opacity: .6;
+        }
+        .fa-twitter {
+            margin-right: 32px;
+        }
+    }
+    &__list {
+        color: #E3E3E3;
+        font-size: 1rem;
+        letter-spacing: .4px;
+    }
+    &__item {
+        &:not(:first-child) {
+            margin-top: 24px;
+        }
+    }
+    &__ttl {
+        color: #E3E3E3;
+        font-size: 40px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    &__copy {
+        text-align: right;
+        color: #E3E3E3;
+        opacity: .6;
+    }
+}
