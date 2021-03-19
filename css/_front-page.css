@@ -600,5 +600,108 @@ body {
   background-image: url(../img/contact-bg-min.png);
   background-size: cover;
   width: 100%;
-  height: 1122px;
+  padding: 60px 120px;
+}
+
+.contact-us__wrap {
+  background-image: url(../img/contact1-min.png);
+  background-size: cover;
+  text-align: center;
+  padding: 60px 0;
+}
+
+.contact-us__head {
+  font-size: 36px;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.2;
+  padding-bottom: 16px;
+}
+
+.contact-us__head__txt {
+  color: #fff;
+  font-size: 1rem;
+}
+
+.contact-form {
+  margin: auto 0;
+  background-color: #fff;
+  padding: 60px 120px;
+  border-radius: 0 0 12px 12px;
+}
+
+.contact-form .contact-from__row {
+  display: flex;
+}
+
+.contact-form .contact-from__row:not(:first-child) {
+  margin-top: 32px;
+}
+
+.contact-form .contact-form__label {
+  width: calc(100% - 188px);
+  padding-top: 5px;
+}
+
+.contact-form .contact-form__label label {
+  font-weight: bold;
+}
+
+.contact-form .contact-form__label label.is-required {
+  display: inline-block;
+  position: relative;
+}
+
+.contact-form .contact-form__label label.is-required::after {
+  content: "必須";
+  margin-left: 12px;
+  font-size: 14px;
+  background-color: #FF4646;
+  color: #fff;
+  border-radius: 2px;
+  text-align: center;
+  padding: 4px 16px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"] {
+  border-bottom: 1px solid #c5cadb;
+  padding-left: 12px;
+  padding-bottom: 5px;
+  width: 532px;
+  height: 32px;
+}
+
+.contact-form select {
+  border: 1px solid #707070;
+  height: 40px;
+  width: 178px;
+}
+
+.contact-form textarea {
+  border: 1px solid #707070;
+  width: 720px;
+  height: 200px;
+}
+
+.contact-form .contact-from__radio {
+  margin-right: 40px;
+}
+
+.contact-form .contact-form__radio [type="radio"] {
+  padding-right: 8px;
+}
+
+.contact-form .contact-form__check {
+  margin-top: 41px;
+  margin-bottom: 41px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #3E3E3E;
+}
+
+.contact-form .contact-form__check [type="checkbox"] {
+  margin-right: 20px;
+  width: 20px;
+  height: 20px;
 }

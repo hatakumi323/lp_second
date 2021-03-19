@@ -476,23 +476,55 @@
   <section class="contact-us">
     <div class="contact-us__inner">
       <div class="contact-us__wrap">
-        <h2 class="contact-us__ttl">Contact Us</h2>
-        <p class="contact-us__sub__ttl">どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。</p>
+        <h2 class="contact-us__head">Contact Us</h2>
+        <p class="contact-us__head__txt">どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。</p>
+      </div>
+      <div class="contact-us__form">
+        <form class="contact-form" action="">
+          <dl class="contact-form__dl">
+            <div class="contact-from__row">
+              <dt class="contact-form__label"><label for="your-kind">お問い合わせ種別</label></dt>
+              <dd class="contact-from__input">
+                <select name="" id="your-kind">
+                  <option value="">セレクト1</option>
+                  <option value="">セレクト2</option>
+                  <option value="">セレクト3</option>
+                </select></dd>
+            </div>
+            <div class="contact-from__row">
+              <dt class="contact-form__label"><label for="your-name" class="is-required">氏名</label></dt>
+              <dd class="contact-from__input"><input id="your-name" type="text" placeholder="氏名"></dd>
+            </div>
+            <div class="contact-from__row">
+              <dt class="contact-form__label"><label for="your-name" class="is-required">フリガナ</label></dt>
+              <dd class="contact-from__input"><input id="your-name" type="text" placeholder="フリガナ"></dd>
+            </div>
+            <div class="contact-from__row">
+              <dt class="contact-form__label"><label for="your-email">メールアドレス</label></dt>
+              <dd class="contact-from__input"><input id="your-email" type="email" placeholder="sample@gmail.com"></dd>
+            </div>
+            <div class="contact-from__row">
+                <dt class="contact-form__label"><label for="your-email">性別</label></dt>
+                <dd class="contact-from__radio"><label for=""><input type="radio" name="contact-from__radio"><span>男性</span></label></dd>
+                <dd class="contact-from__radio"><label for=""><input type="radio" name="contact-from__radio"><span>女性</span></label></dd>
+            </div>
+            <div class="contact-from__row">
+              <dt class="contact-form__label"><label for="your-message">メッセージ</label></dt>
+              <dd class="contact-from__input"><textarea name="" id="your-message"></textarea></dd>
+            </div>
+          </dl>
+          <div class="contact-form__check">
+            <label><input type="checkbox"><span><a>個人情報保護方針に同意する</a></span></label>
+          </div>
+          <div class="contact-from__button">
+            <input class="contact__btn" type="submit" value="送信する">
+          </div>
+        </form>
       </div>
     </div>
   </section>
   <!--
 
-    
-    
-
-    お問い合わせ種別 選択してください
-    氏名 必須
-    必須 必須
-    メールアドレス
-    性別　男性　女性
-    メッセージ
-    個人情報保護方針に同意する
     送信する
 
     サイトマップ　　　Sample Corp.

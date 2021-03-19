@@ -555,5 +555,125 @@ body {
       background-image: url(../img/contact-bg-min.png);
       background-size: cover;
       width: 100%;
-      height: 1122px;
+    //   height: 1122px;
+      padding: 60px 120px;
+      &__wrap {
+          background-image: url(../img/contact1-min.png);
+          background-size: cover;
+          text-align: center;
+          padding: 60px 0;
+      }
+      &__head{
+        font-size: 36px;
+        color: #fff;
+        font-family: $font-family-english;
+        line-height: 1.2;
+        padding-bottom: 16px;
+      }
+      &__head__txt {
+          color: #fff;
+          font-size: 1rem;
+      }
+  }
+
+  .contact__form {
+
+    }
+
+    .contact-form {
+        margin: auto 0;
+        background-color: #fff;
+        padding: 60px 120px;
+        border-radius: 0 0 12px 12px;
+
+        .contact-form__dl {
+
+        }
+
+        .contact-from__row {
+            display: flex;
+            // align-items: center;
+
+            &:not(:first-child) {
+                margin-top: 32px;
+            }
+        }
+
+        .contact-form__label {
+            width: calc(100% - 188px);
+            padding-top: 5px;
+            label {
+                font-weight: bold;
+
+                &.is-required {
+                    display: inline-block;
+                    position: relative;
+
+                    &::after {
+                        content: "必須";
+                        margin-left: 12px;
+                        font-size: 14px;
+                        background-color: #FF4646;
+                        color: #fff;
+                        border-radius: 2px;
+                        text-align: center;
+                        padding: 4px 16px;
+                    }
+                }
+            }
+        }
+
+        .contact-form__input {
+            
+        }
+        input[type="text"],
+        input[type="email"] {
+            border-bottom: 1px solid #c5cadb;
+            padding-left: 12px;
+            padding-bottom: 5px;
+            width: 532px;
+            height: 32px;
+        }
+        
+        select {
+            border: 1px solid #707070;
+            height: 40px;
+            width: 178px;
+        }
+
+        textarea {
+            border: 1px solid #707070;
+            width: 720px;
+            height: 200px;
+        }
+
+        .contact-from__radio {
+            margin-right: 40px;
+            
+        }
+
+        .contact-form__radio {
+            [type="radio"] {
+                padding-right: 8px;
+            }
+        }
+
+        .contact-form__check {
+            margin-top: 41px;
+            margin-bottom: 41px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #3E3E3E;
+            [type="checkbox"] {
+                margin-right: 20px;
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        .contact-form__button {
+            [type="submit"] {
+                
+            }
+        }
   }

@@ -235,8 +235,6 @@ input,
 optgroup,
 select,
 textarea {
-  -webkit-appearance: none;
-  appearance: none;
   vertical-align: middle;
   color: inherit;
   font: inherit;
