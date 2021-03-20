@@ -44,3 +44,12 @@ $('.back-to-top').on('click', (e) => {
 
 // ページの途中でリロード（再読み込み）された場合でも、ボタンが表示されるようにする
 updateButton();
+
+jQuery('.drawer__icon').on('click',function(e){
+  e.preventDefault();
+
+  jQuery('.drawer__icon').toggleClass('is-active');
+  jQuery('.drawer__content').toggleClass('is-active');
+  jQuery('.drawer__background').toggleClass('is-active');
+  return false;
+})
