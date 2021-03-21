@@ -67,19 +67,34 @@ body {
   height: 648px;
   background-image: url(../img/mv-min.png);
   background-size: cover;
-  position: relative;
+}
+
+@media (min-width: 768px) {
+  .about {
+    background-position: center center;
+  }
+}
+
+@media (max-width: 767px) {
+  .about {
+    height: 668px;
+  }
 }
 
 .about__inner {
-  width: 50%;
-  height: 275px;
-  position: absolute;
-  top: 236px;
-  left: 590px;
+  max-width: 1240px;
 }
 
 .about__text {
-  padding-left: 50px;
+  margin-left: 620px;
+  padding-top: 230px;
+}
+
+@media (max-width: 767px) {
+  .about__text {
+    margin-left: auto;
+    max-width: 600px;
+  }
 }
 
 .about__ttl {
@@ -87,7 +102,14 @@ body {
   font-size: 32px;
   color: #3E3E3E;
   line-height: 1.5;
-  padding-bottom: 40px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 767px) {
+  .about__ttl {
+    font-size: 24px;
+    margin-bottom: 14px;
+  }
 }
 
 .about__body {
@@ -102,10 +124,29 @@ body {
   padding: 120px 40px;
 }
 
+@media (max-width: 767px) {
+  .news {
+    padding: 0 16px;
+  }
+}
+
 .news__inner {
   width: 100%;
   background-color: #fff;
   box-shadow: 0 2px 4px gray;
+}
+
+@media (min-width: 768px) {
+  .news__inner {
+    padding: 56px 48px 40px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .news__inner {
+    padding: 36px 0 38px;
+  }
 }
 
 .news__ttl {
@@ -119,6 +160,12 @@ body {
 
 .news__list {
   padding: 0 60px;
+}
+
+@media (max-width: 767px) {
+  .news__list {
+    margin-top: 36px;
+  }
 }
 
 .news__item {
@@ -135,9 +182,21 @@ body {
   border-top: 1px solid #3e3e3e;
 }
 
+@media (max-width: 767px) {
+  .news__item {
+    display: block;
+  }
+}
+
 .news__day {
   line-height: 1.4;
   font-weight: normal;
+}
+
+@media (max-width: 767px) {
+  .news__day {
+    font-size: 12px;
+  }
 }
 
 .news__label {
@@ -147,6 +206,14 @@ body {
   margin: 8px 32px;
 }
 
+@media (max-width: 767px) {
+  .news__label {
+    font-size: 12px;
+    padding: 4px 16px;
+    text-align: center;
+  }
+}
+
 .news__text {
   line-height: 1.5;
 }
@@ -154,6 +221,14 @@ body {
 .news__arrow {
   position: absolute;
   right: 60px;
+}
+
+@media (max-width: 767px) {
+  .news__arrow {
+    position: absolute;
+    top: 50%;
+    right: 0;
+  }
 }
 
 .news__btn {
@@ -167,6 +242,13 @@ body {
   width: 100%;
   height: 400px;
   background-color: #3E3E3E;
+}
+
+@media (max-width: 767px) {
+  .service {
+    padding: 0 16px;
+    height: auto;
+  }
 }
 
 .service__inner {
@@ -188,6 +270,13 @@ body {
   justify-content: space-between;
   top: 150px;
   box-shadow: 0 2px 4px gray;
+}
+
+@media (max-width: 767px) {
+  .service__list {
+    display: block;
+    padding: 40px 0 34px;
+  }
 }
 
 .service__item {
@@ -381,55 +470,128 @@ body {
   }
 }
 
-.price {
-  padding: 60px 160px;
+@media (min-width: 768px) {
+  .price {
+    margin: 118px auto 0;
+    max-width: 1040px;
+    padding: 0 40px;
+    width: 100%;
+  }
 }
 
-.price__ttl {
-  font-size: 36px;
-  color: #3E3E3E;
-  font-family: 'Montserrat', sans-serif;
+@media (max-width: 767px) {
+  .price {
+    margin: 0 16px;
+    padding-top: 36px;
+  }
+}
+
+.price .util-ttl {
   text-align: center;
-  line-height: 1.2;
-  padding: 60px 0;
 }
 
-.price table {
-  width: 100%;
+.price-table {
+  border: solid 1px #707070;
   border-collapse: collapse;
+  font-size: 1.8rem;
+  margin-top: 54px;
+  width: 100%;
 }
 
-.price table th {
-  width: 30%;
-  padding: 30px;
-  text-align: center;
+@media (max-width: 767px) {
+  .price-table {
+    font-size: 2rem;
+    margin-top: 38px;
+  }
+}
+
+.price-table th,
+.price-table td {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  padding: 0.8em 20px;
+}
+
+@media (min-width: 768px) {
+  .price-table th,
+  .price-table td {
+    font-size: 2.4rem;
+    font-weight: 600;
+    padding: 0.5em 1.6em;
+  }
+}
+
+@media (max-width: 767px) {
+  .price-table th,
+  .price-table td {
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+  }
+}
+
+.price-table th {
+  background: #3e3e3e;
   color: #fff;
-  background-color: #3e3e3e;
-  min-width: 300px;
-  border: 1px solid #3e3e3e;
-  border-bottom: 1px solid #fff;
-  align-items: center;
-  font-size: 24px;
-  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  width: 27.3%;
 }
 
-.price table th:last-child {
-  border-bottom: 1px solid #3e3e3e;
+@media (max-width: 767px) {
+  .price-table th {
+    width: 29.3%;
+  }
 }
 
-.price table td {
-  width: 70%;
-  padding: 30px;
-  border: 1px solid #3e3e3e;
-  font-weight: bold;
-  font-size: 24px;
-  font-family: "Montserrat", sans-serif;
+.price-table td {
+  background: #fff;
 }
 
-.price span {
-  padding-top: 12px;
-  font-size: 12px;
-  letter-spacing: 2px;
+.price-table tr:not(:first-child) th {
+  border-top: solid 1px #ddd;
+}
+
+.price-table tr:not(:first-child) td {
+  border-top: solid 1px #707070;
+}
+
+tr:not(:first-child) .price-table td {
+  border-top: solid 1px #707070;
+}
+
+.price-txt {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+@media (min-width: 768px) {
+  .price-txt {
+    margin-top: 1em;
+  }
+}
+
+/* bg wrapper
+---------------------------- */
+.bg-wrapper {
+  position: relative;
+}
+
+.bg-wrapper:before {
+  background: #3e3e3e;
+  bottom: 0;
+  content: '';
+  display: block;
+  left: 0;
+  position: absolute;
+  top: 294px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .bg-wrapper:before {
+    bottom: 138px;
+    top: 146px;
+    width: 76.5625%;
+  }
 }
 
 .comments {
@@ -439,6 +601,12 @@ body {
 .comments__inner {
   padding-left: 40px;
   padding-bottom: 120px;
+}
+
+@media (max-width: 767px) {
+  .comments__inner {
+    padding: 0 16px 60px;
+  }
 }
 
 .comments__ttl {
@@ -454,6 +622,12 @@ body {
   align-items: center;
   display: flex;
   padding-top: 100px;
+}
+
+@media (max-width: 767px) {
+  .comments__list__wrapper {
+    display: block;
+  }
 }
 
 .comments__list {
@@ -483,6 +657,12 @@ body {
   width: 534px;
 }
 
+@media (max-width: 767px) {
+  .comments__img {
+    display: none;
+  }
+}
+
 .comments__bg {
   position: absolute;
   background-color: #3e3e3e;
@@ -490,6 +670,12 @@ body {
   height: 500px;
   width: 960px;
   z-index: -999;
+}
+
+@media (max-width: 767px) {
+  .comments__bg {
+    width: 100%;
+  }
 }
 
 .qa {
@@ -514,6 +700,14 @@ body {
   position: absolute;
   right: 0;
   margin-right: 32px;
+}
+
+@media (max-width: 767px) {
+  .qa__list {
+    width: 100%;
+    margin: 0;
+    padding: 0 16px 60px;
+  }
 }
 
 .qa__item {
@@ -553,6 +747,12 @@ body {
 .access {
   position: relative;
   height: 760px;
+}
+
+@media (max-width: 767px) {
+  .access {
+    display: block;
+  }
 }
 
 .access__info {
