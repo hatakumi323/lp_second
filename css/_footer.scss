@@ -1,10 +1,46 @@
+// レイアウト幅
+$layout-width-canvas: 1280px;
+$layout-width-inner: 1200px;
+
+// ブレークポイント
+$breakpoints: (
+	"sp-down": "(max-width: 767px)",
+	"sp-up": "(min-width: 768px)",
+	"tab-down": "(max-width: #{$layout-width-inner - 1px})",
+	"tab-up": "(min-width: #{$layout-width-inner})",
+	"retina": "only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx)",
+);
+
+// メディアクエリー
+@mixin mq($breakpoint: sp) {
+	@media #{map-get($breakpoints, $breakpoint)} {
+		@content;
+	}
+}
+
 .footer {
     background-color: #3E3E3E;
-    padding: 60px 160px;
+    
+    @include mq('sp-up') {
+        padding: 60px 160px;
+    }
+
+    @include mq('sp-down') {
+        padding: 20px 40px;
+    }
     &__inner {
-        width: 980px;
-        display: flex;
-        justify-content: space-between;
+        
+        @include mq('sp-up') {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+    
+        @include mq('sp-down') {
+            width: 100%;
+            display: block;
+            text-align: center;
+        }
         .icon__wrap {
             display: flex;
             color: #E3E3E3;

@@ -1,12 +1,33 @@
 .footer {
   background-color: #3E3E3E;
-  padding: 60px 160px;
 }
 
-.footer__inner {
-  width: 980px;
-  display: flex;
-  justify-content: space-between;
+@media (min-width: 768px) {
+  .footer {
+    padding: 60px 160px;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer {
+    padding: 20px 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer__inner {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer__inner {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
 }
 
 .footer__inner .icon__wrap {

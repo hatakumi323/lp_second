@@ -566,9 +566,17 @@ tr:not(:first-child) .price-table td {
             box-shadow: 0 2px 4px gray;
             }
         &__item {
-            display: flex;
-            align-items: center;
-            padding-bottom: 60px;
+            
+            @include mq('sp-up') {
+                display: flex;
+                align-items: center;
+                padding-bottom: 60px;
+            }
+        
+            @include mq('sp-down') {
+                display: block;
+                padding: 20px 0;
+            }
                 img {
                     padding-right: 32px;
                 }
@@ -599,42 +607,46 @@ tr:not(:first-child) .price-table td {
   }
 
   .qa {
+    padding: 64px 20px 86px;
     background-image: url(../img/qa-bg-min.png);
+    background-attachment: fixed;
+    background-position: center;
     background-size: cover;
-    height: 925px;
-    padding: 0 40px 120px 0;
-    position: relative;
-
-    &__ttl {
+    background-repeat: no-repeat;
+    &-inner {
+        max-width: 1024px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &-ttl {
+        margin-top: 40px;
+        font-size: 32px;
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 60px;
+        color: #3E3E3E;
         font-size: 36px;
         color: #3E3E3E;
         font-family: 'Montserrat', sans-serif;
-        text-align: center;
-        line-height: 1.2;
-        padding: 60px 0;
     }
-    &__list {
-        width: 50%;
-        position: absolute;
-        right: 0;
-        margin-right: 32px;
+    &_items {
+        width: 612px;
+        position: relative;
+        margin: 0 0 0 auto;
+    }
 
-        @include mq('sp-down') {
-            width: 100%;
-            margin: 0;
-            padding: 0 16px 60px;
-        }
-    }
     &__item {
-        border-radius: 4px;
+        margin: 32px 0;
         padding: 16px;
-        background-color: #fff;
-        margin-bottom: 32px;
-        &__inner {
-            align-items: center;
-            display: flex;
-            position: relative;
-        }
+        background: #fff;
+        border-radius: 4px;
+    }
+    
+    .accordion__head {
+        color: #444444;
+        font-size: 14px;
+        cursor: pointer;
+        border-radius: 4px;
         span {
             background-color: #3B69FF;
             color: #fff;
@@ -644,17 +656,37 @@ tr:not(:first-child) .price-table td {
             font-size: 1rem;
         }
     }
-    &__acd {
+
+    .accordion__icon {
         position: absolute;
-        right: 0;
+        right: 16px;
+        
+        &::after {
+            content: url(../img/minus.svg);
+        }
     }
-    .acd__ans {
-        padding: 16px;
-        background: rgba(73, 115, 255, 0.2);;
+    
+    .accordion__body {
+        margin: 0;
+        background: #fff;
+        font-weight: 700;
+
+        &:nth-of-type(n+1) {
+            display: none;
+        }
+    }
+    
+    .accordion__body-in {
+        line-height: (24 / 16);
+        color: #444444;
+        position: relative;
+        font-size: 14px;
+        background: rgba(73, 115, 255, 0.2);
         border-radius: 4px;
-        margin-top: 16px;
+        padding: 16px;
+        margin-top: 20px;
     }
-  }
+}
   
   .access {
       position: relative;
@@ -708,9 +740,15 @@ tr:not(:first-child) .price-table td {
       background-image: url(../img/contact-bg-min.png);
       background-size: cover;
       width: 100%;
-      padding: 60px 120px;
+      
+      @include mq('sp-up') {
+        padding: 60px 120px;
+    }
+      @include mq('sp-down') {
+        padding: 20px 40px;
+    }
       &__wrap {
-          background-image: url(../img/contact1-min.png);
+          background-image: url(../img/contact1@2x-min.png);
           background-size: cover;
           text-align: center;
           padding: 60px 0;
@@ -735,15 +773,30 @@ tr:not(:first-child) .price-table td {
     .contact-form {
         margin: auto 0;
         background-color: #fff;
-        padding: 60px 120px;
         border-radius: 0 0 12px 12px;
+        
+        @include mq('sp-up') {
+            padding: 60px 120px;
+        }
+
+        @include mq('sp-down') {
+            padding: 20px;
+        }
+
 
         .contact-form__dl {
 
         }
 
         .contact-from__row {
-            display: flex;
+            
+            @include mq('sp-up') {
+                display: flex;
+            }
+    
+            @include mq('sp-down') {
+                display: block;
+            }
             &:nth-child(6) {
                 display: block;
             }
@@ -756,6 +809,10 @@ tr:not(:first-child) .price-table td {
         .contact-form__label {
             width: calc(100% - 188px);
             padding-top: 5px;
+
+            @include mq('sp-down') {
+                width: 100%;
+            }
             label {
                 font-weight: bold;
 
@@ -783,16 +840,31 @@ tr:not(:first-child) .price-table td {
         input[type="text"],
         input[type="email"] {
             border-bottom: 1px solid #c5cadb;
-            padding-left: 12px;
-            padding-bottom: 5px;
-            width: 532px;
-            height: 32px;
+            
+            @include mq('sp-up') {
+                padding-left: 12px;
+                padding-bottom: 5px;
+                width: 532px;
+                height: 32px;
+            }
+    
+            @include mq('sp-down') {
+                width: auto;
+            }
         }
         
         select {
             border: 1px solid #707070;
-            height: 40px;
-            width: 178px;
+            
+            @include mq('sp-up') {
+                height: 40px;
+                width: 178px;
+            }
+    
+            @include mq('sp-down') {
+                width: 100%;
+                height: auto;
+            }
         }
 
         textarea {
@@ -814,11 +886,19 @@ tr:not(:first-child) .price-table td {
         }
 
         .contact-form__check {
-            margin-top: 41px;
-            margin-bottom: 41px;
-            font-size: 18px;
             font-weight: bold;
             color: #3E3E3E;
+            
+            @include mq('sp-up') {
+                margin-top: 41px;
+                margin-bottom: 41px;
+                font-size: 18px;
+            }
+    
+            @include mq('sp-down') {
+                margin: 20px 0;
+                font-size: .6rem;
+            }
             [type="checkbox"] {
                 margin-right: 20px;
                 width: 20px;

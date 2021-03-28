@@ -1107,10 +1107,19 @@ tr:not(:first-child) .price-table td {
   box-shadow: 0 2px 4px gray;
 }
 
-.comments__item {
-  display: flex;
-  align-items: center;
-  padding-bottom: 60px;
+@media (min-width: 768px) {
+  .comments__item {
+    display: flex;
+    align-items: center;
+    padding-bottom: 60px;
+  }
+}
+
+@media (max-width: 767px) {
+  .comments__item {
+    display: block;
+    padding: 20px 0;
+  }
 }
 
 .comments__item img {
@@ -1150,51 +1159,53 @@ tr:not(:first-child) .price-table td {
 }
 
 .qa {
+  padding: 64px 20px 86px;
   background-image: url(../img/qa-bg-min.png);
+  background-attachment: fixed;
+  background-position: center;
   background-size: cover;
-  height: 925px;
-  padding: 0 40px 120px 0;
-  position: relative;
+  background-repeat: no-repeat;
 }
 
-.qa__ttl {
+.qa-inner {
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.qa-ttl {
+  margin-top: 40px;
+  font-size: 32px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 60px;
+  color: #3E3E3E;
   font-size: 36px;
   color: #3E3E3E;
   font-family: 'Montserrat', sans-serif;
-  text-align: center;
-  line-height: 1.2;
-  padding: 60px 0;
 }
 
-.qa__list {
-  width: 50%;
-  position: absolute;
-  right: 0;
-  margin-right: 32px;
-}
-
-@media (max-width: 767px) {
-  .qa__list {
-    width: 100%;
-    margin: 0;
-    padding: 0 16px 60px;
-  }
+.qa_items {
+  width: 612px;
+  position: relative;
+  margin: 0 0 0 auto;
 }
 
 .qa__item {
-  border-radius: 4px;
+  margin: 32px 0;
   padding: 16px;
-  background-color: #fff;
-  margin-bottom: 32px;
+  background: #fff;
+  border-radius: 4px;
 }
 
-.qa__item__inner {
-  align-items: center;
-  display: flex;
-  position: relative;
+.qa .accordion__head {
+  color: #444444;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
 }
 
-.qa__item span {
+.qa .accordion__head span {
   background-color: #3B69FF;
   color: #fff;
   border-radius: 999px;
@@ -1203,16 +1214,34 @@ tr:not(:first-child) .price-table td {
   font-size: 1rem;
 }
 
-.qa__acd {
+.qa .accordion__icon {
   position: absolute;
-  right: 0;
+  right: 16px;
 }
 
-.qa .acd__ans {
-  padding: 16px;
+.qa .accordion__icon::after {
+  content: url(../img/minus.svg);
+}
+
+.qa .accordion__body {
+  margin: 0;
+  background: #fff;
+  font-weight: 700;
+}
+
+.qa .accordion__body:nth-of-type(n+1) {
+  display: none;
+}
+
+.qa .accordion__body-in {
+  line-height: 1.5;
+  color: #444444;
+  position: relative;
+  font-size: 14px;
   background: rgba(73, 115, 255, 0.2);
   border-radius: 4px;
-  margin-top: 16px;
+  padding: 16px;
+  margin-top: 20px;
 }
 
 .access {
@@ -1271,11 +1300,22 @@ tr:not(:first-child) .price-table td {
   background-image: url(../img/contact-bg-min.png);
   background-size: cover;
   width: 100%;
-  padding: 60px 120px;
+}
+
+@media (min-width: 768px) {
+  .contact-us {
+    padding: 60px 120px;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-us {
+    padding: 20px 40px;
+  }
 }
 
 .contact-us__wrap {
-  background-image: url(../img/contact1-min.png);
+  background-image: url(../img/contact1@2x-min.png);
   background-size: cover;
   text-align: center;
   padding: 60px 0;
@@ -1297,12 +1337,31 @@ tr:not(:first-child) .price-table td {
 .contact-form {
   margin: auto 0;
   background-color: #fff;
-  padding: 60px 120px;
   border-radius: 0 0 12px 12px;
 }
 
-.contact-form .contact-from__row {
-  display: flex;
+@media (min-width: 768px) {
+  .contact-form {
+    padding: 60px 120px;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-form {
+    padding: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .contact-form .contact-from__row {
+    display: flex;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-form .contact-from__row {
+    display: block;
+  }
 }
 
 .contact-form .contact-from__row:nth-child(6) {
@@ -1316,6 +1375,12 @@ tr:not(:first-child) .price-table td {
 .contact-form .contact-form__label {
   width: calc(100% - 188px);
   padding-top: 5px;
+}
+
+@media (max-width: 767px) {
+  .contact-form .contact-form__label {
+    width: 100%;
+  }
 }
 
 .contact-form .contact-form__label label {
@@ -1341,16 +1406,41 @@ tr:not(:first-child) .price-table td {
 .contact-form input[type="text"],
 .contact-form input[type="email"] {
   border-bottom: 1px solid #c5cadb;
-  padding-left: 12px;
-  padding-bottom: 5px;
-  width: 532px;
-  height: 32px;
+}
+
+@media (min-width: 768px) {
+  .contact-form input[type="text"],
+  .contact-form input[type="email"] {
+    padding-left: 12px;
+    padding-bottom: 5px;
+    width: 532px;
+    height: 32px;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-form input[type="text"],
+  .contact-form input[type="email"] {
+    width: auto;
+  }
 }
 
 .contact-form select {
   border: 1px solid #707070;
-  height: 40px;
-  width: 178px;
+}
+
+@media (min-width: 768px) {
+  .contact-form select {
+    height: 40px;
+    width: 178px;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-form select {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .contact-form textarea {
@@ -1369,11 +1459,23 @@ tr:not(:first-child) .price-table td {
 }
 
 .contact-form .contact-form__check {
-  margin-top: 41px;
-  margin-bottom: 41px;
-  font-size: 18px;
   font-weight: bold;
   color: #3E3E3E;
+}
+
+@media (min-width: 768px) {
+  .contact-form .contact-form__check {
+    margin-top: 41px;
+    margin-bottom: 41px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-form .contact-form__check {
+    margin: 20px 0;
+    font-size: .6rem;
+  }
 }
 
 .contact-form .contact-form__check [type="checkbox"] {
@@ -1603,13 +1705,34 @@ tr:not(:first-child) .price-table td {
 
 .footer {
   background-color: #3E3E3E;
-  padding: 60px 160px;
 }
 
-.footer__inner {
-  width: 980px;
-  display: flex;
-  justify-content: space-between;
+@media (min-width: 768px) {
+  .footer {
+    padding: 60px 160px;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer {
+    padding: 20px 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer__inner {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer__inner {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
 }
 
 .footer__inner .icon__wrap {
