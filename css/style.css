@@ -1186,9 +1186,20 @@ tr:not(:first-child) .price-table td {
 }
 
 .qa_items {
-  width: 612px;
   position: relative;
-  margin: 0 0 0 auto;
+}
+
+@media (min-width: 768px) {
+  .qa_items {
+    width: 612px;
+    margin: 0 0 0 auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .qa_items {
+    width: 100%;
+  }
 }
 
 .qa__item {
@@ -1219,8 +1230,8 @@ tr:not(:first-child) .price-table td {
   right: 16px;
 }
 
-.qa .accordion__icon::after {
-  content: url(../img/minus.svg);
+.qa .accordion__icon::before {
+  content: url(../img/plus.svg);
 }
 
 .qa .accordion__body {

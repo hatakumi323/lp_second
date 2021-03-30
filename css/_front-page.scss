@@ -432,7 +432,7 @@ body {
 
 	@include mq('sp-down') {
 		margin: 0 16px;
-    padding-top: 36px;
+        padding-top: 36px;
 	}
 
 	.util-ttl {
@@ -630,9 +630,16 @@ tr:not(:first-child) .price-table td {
         font-family: 'Montserrat', sans-serif;
     }
     &_items {
-        width: 612px;
         position: relative;
-        margin: 0 0 0 auto;
+        
+        @include mq('sp-up') {
+            width: 612px;
+            margin: 0 0 0 auto;
+        }
+    
+        @include mq('sp-down') {
+            width: 100%;
+        }
     }
 
     &__item {
@@ -661,8 +668,8 @@ tr:not(:first-child) .price-table td {
         position: absolute;
         right: 16px;
         
-        &::after {
-            content: url(../img/minus.svg);
+        &::before {
+            content: url(../img/plus.svg);
         }
     }
     
